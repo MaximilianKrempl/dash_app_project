@@ -21,7 +21,7 @@ import dash_html_components as html
 import plotly.graph_objs as go
 import pandas as pd
 
-df = pd.read_csv("C://Users//Max//Dropbox//ESADE//Subjects//Cloud Computing//7 - Data Science in the cloud Data Visualization//CC 7//CC 7//nama_10_gdp//nama_10_gdp_1_Data.csv")
+df = pd.read_csv("nama_10_gdp_1_Data.csv")
 df = df.rename(index = str, columns = {"GEO": "Country Name", "TIME": "Year", "UNIT": "Unit", "NA_ITEM": "Indicator Name"}).set_index("Country Name")
 df = df.drop(['European Union (current composition)',
        'European Union (without United Kingdom)',
