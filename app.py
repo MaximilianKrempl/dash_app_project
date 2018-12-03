@@ -10,7 +10,7 @@
 # * The other graph will be a line chart with two DropDown boxes, one for the country and the other for selecting one of the indicators. (hint use Scatter object using mode = 'lines' [(more here)](https://plot.ly/python/line-charts/) 
 # 
 
-# In[2]:
+# In[8]:
 
 
 # Setting everything up
@@ -74,6 +74,8 @@ app.layout = html.Div([
         marks={str(year): str(year) for year in df['Year'].unique()}
     ),
     
+    html.Div(style={"height":50}),
+    
     html.H1(children='2. Graph: Select country and indicator'),
     
     html.Div([
@@ -93,7 +95,9 @@ app.layout = html.Div([
             ), style={'width': '48%', 'float': 'right', 'display': 'inline-block'})
     ]),
     
-    dcc.Graph(id='indicator-graphic2')
+    dcc.Graph(id='indicator-graphic2'),
+    
+    html.H1(children='Coded by Maximilian Krempl :-)',style={'color': 'black', 'fontSize': 14})
 ])
 
 # Function that updates the figure
